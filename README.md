@@ -345,7 +345,7 @@ DESC constraints;
 SELECT * FROM constraints;
 ```
 | Id | Firstname | email                   | DOF        | class | age |
-|:---|:----------|:------------------------|:-----------|:------------|
+|:---|:----------|:------------------------|:-----------|:------|:----|
 |  1 | Jerusheya | jerusheya2002@gmail.com | 2002-08-26 | 12    | 19  |
 
 ###### 1 row in set (0.01 sec)
