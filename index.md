@@ -1,3 +1,5 @@
+# Database-and-Mysql-Practice
+
 # MySQL commends
 
 ### SHOW DATABASES Statement:
@@ -384,20 +386,6 @@ SELECT * FROM foreignkey;
 
 ###### 1 row in set (0.01 sec)
 *  *  *
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
