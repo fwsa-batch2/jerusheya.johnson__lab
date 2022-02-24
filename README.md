@@ -353,7 +353,7 @@ SELECT * FROM constraints;
 ### FOREIGN KEY
 
 ```syntax
-CREATE TABLE foreignkey(studId int PRIMARY KEY AUTO_INCREMENT, mark int(3), Id int, FOREIGN KEY(Id) REFERENCES constraints(Id));
+CREATE TABLE foreignkey(studID int PRIMARY KEY AUTO_INCREMENT, 10th_mark int(3), ID int, FOREIGN KEY(Id) REFERENCES constraints(Id));
 ```
 ###### Query OK, 0 rows affected, 1 warning (0.05 sec)
 ### INSERT INTO
