@@ -355,24 +355,24 @@ SELECT * FROM constraints;
 ### FOREIGN KEY
 
 ```syntax
-CREATE TABLE foreignkey(studID int PRIMARY KEY AUTO_INCREMENT, 10th_mark int(3), ID int, FOREIGN KEY(Id) REFERENCES constraints(Id));
+CREATE TABLE foreignkey(studID int PRIMARY KEY AUTO_INCREMENT, 10th_mark int(3), Employee_ID int, FOREIGN KEY(Employee_ID) REFERENCES constraints(Id));
 ```
 ###### Query OK, 0 rows affected, 1 warning (0.05 sec)
 ### INSERT INTO
 
 ```syntax
-INSERT INTO foreignkey(mark,PersonId) VALUES (100,1);
+INSERT INTO foreignkey(10th_mark,EmployeeId) VALUES (480,1);
 ```
 ###### Query OK, 1 row affected (0.01 sec)
 ```syntax
 DESC foreignkey;
 ```
 
-| Field  | Type | Null | Key | Default | Extra |
-|:-------|:-----|:-----|:---:|:--------|:------|
-| studId | int  | NO   | PRI | NULL    |       |
-| mark   | int  | YES  |     | NULL    |       |
-| Id     | int  | YES  | MUL | NULL    |       |
+| Field        | Type | Null | Key | Default | Extra |
+|:-------------|:-----|:-----|:---:|:--------|:------|
+| studId       | int  | NO   | PRI | NULL    |       |
+| 10th_mark    | int  | YES  |     | NULL    |       |
+| Employee_Id  | int  | YES  | MUL | NULL    |       |
 
 ###### 3 rows in set (0.00 sec)
 ### SELECT
@@ -380,9 +380,9 @@ DESC foreignkey;
 ```syntax
 SELECT * FROM foreignkey;
 ```
-| studId | mark | PersonId |
-|:-------|:-----|:---------|
-|      1 |  100 |        1 |
+| studId | 10th_mark | Employee_Id |
+|:-------|:----------|:------------|
+|      1 |    480    |     1       |
 
 ###### 1 row in set (0.01 sec)
 *  *  *
