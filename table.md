@@ -13,8 +13,8 @@
 ```syntax
 SHOW TABLES;
 ```
-| fwsa_batch2          |
-|:----|
+| fwsa_batch2            |
+|:-----------------------|
 | StudentsList           |
 
 ###### 1 row in set (0.01 sec)
