@@ -1,4 +1,4 @@
-# tables:
+# tables:( completed )
 
 ### CREATE TABLE Statement:
 

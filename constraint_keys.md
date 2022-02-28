@@ -1,36 +1,36 @@
-# constraints:
+# constraints:( completed )
 
 ## MySQL Constraints:
 
-### NOT NULL
+### 1.NOT NULL
 
 ```syntax
  CREATE TABLE constraints(name varchar(20) NOT NULL);
 ```
 ###### not null - doesnot allow null
 
-### UNIQUE
+### 2.UNIQUE
 
 ```syntax
  CREATE TABLE constraints(email varchar(60) UNIQUE);
 ```
 ###### unique - every values should be unique, does not allow repitition but allows null for infinite times
 
-### DEFAULT
+### 3.DEFAULT
 
 ```syntax
 CREATE TABLE constraints(class tinyint(2) DEFAULT '12');
 ```
 ###### default - fixes a particular value as default
 
-### CHECK
+### 4.CHECK
 
 ```syntax
 CREATE TABLE constraints(age int(2) NOT NULL, CHECK(age>=16));
 ```
 ###### check - checks a particular condition
 
-### PRIMARY KEY
+### 5.PRIMARY KEY
 
 ```syntax
 CREATE TABLE constraints(id tinyint(2) PRIMARY KEY AUTO_INCREMENT);
@@ -73,7 +73,7 @@ SELECT * FROM constraints;
 
 ###### 1 row in set (0.01 sec)
 
-### FOREIGN KEY
+### 6.FOREIGN KEY
 
 ```syntax
 CREATE TABLE foreignkey(studID int PRIMARY KEY AUTO_INCREMENT, 10th_mark int(3), Employee_ID int, FOREIGN KEY(Employee_ID) REFERENCES constraints(Id));

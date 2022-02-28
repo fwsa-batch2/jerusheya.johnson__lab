@@ -1,4 +1,4 @@
-# database:
+# database:( completed )
 
 ```syntax
 SHOW DATABASES;
