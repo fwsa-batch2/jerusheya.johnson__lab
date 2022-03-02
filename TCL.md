@@ -84,9 +84,32 @@ SELECT * FROM table_name;
 ###### Query Ok,4 row affected(0.00 sec)
 
 ```syntax
-INSERT INTO table_name VALUES ('jeru'),('sess'),('ruby'),('john');
+INSERT INTO table_name VALUES ('deepika');
 ```
 ###### Query Ok,4 rows affected(0.00 sec)
+
+
+```syntax
+SELECT * FROM table_name;
+```
+| name    |
+|:--------|
+| jeru    |
+| sess    |
+| ruby    |
+| john    |
+| deepika |
+
+###### Query Ok,5 row affected(0.00 sec)
+
+
+### Rollback :
+#### only rollback if committed the information;
+
+```syntax
+ROLLBACK;
+```
+###### Query Ok,0 row affected(0.00 sec)
 
 ```syntax
 SELECT * FROM table_name;
@@ -100,10 +123,8 @@ SELECT * FROM table_name;
 
 ###### Query Ok,4 row affected(0.00 sec)
 
+### 3. SAVEPOINT:
 
-### Rollback :
-
-```syn
 
 
 

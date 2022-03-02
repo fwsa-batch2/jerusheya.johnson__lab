@@ -78,6 +78,15 @@ SELECT * FROM constraints;
 ```syntax
 CREATE TABLE foreignkey(studID int PRIMARY KEY AUTO_INCREMENT, 10th_mark int(3), Employee_ID int, FOREIGN KEY(Employee_ID) REFERENCES constraints(Id));
 ```
+(or)
+
+##### usage of constraint constraint_name --> can be used when deleting the constraint.
+##### usage of ON DELETE CASCADE, ON UPDATE CASCADE --> deletes and updates data in child table also.
+
+```syntax
+CREATE TABLE foreignkey(studID int PRIMARY KEY AUTO_INCREMENT, 10th_mark int(3), Employee_ID int,CONSTRAINT fk_id FOREIGN KEY(Employee_ID) REFERENCES constraints(Id) ON DELETE CASCADE ON UPDATE CASCADE);
+```
+
 ###### Query OK, 0 rows affected, 1 warning (0.05 sec)
 ### INSERT INTO
 
@@ -109,3 +118,9 @@ SELECT * FROM foreignkey;
 *  *  *
 
 
+### DELETING A CONSTRAINT:
+
+```syntax
+ALTER TABLE table_name DROP CONSTRAINT constraint_name;
+```
+eg : ALTER TABLE table_name DROP FOREIGN KEY fk_id;
