@@ -268,11 +268,6 @@ SELECT * FROM student INNER JOIN Student_class ON student.id=Student_detail.id;
 
  ###### Query ok, 12 rows selected (0.001 sec)
 
- ##### using suqueries:
-
- ```syntax
- SELECT * FROM student IN (SELECT class,status FROM Student_detail)
-```
 
  #### Feature 14: Display Student Details for the given input class 
 Class : 5th Standard
@@ -320,7 +315,8 @@ SELECT students.id,students.name,Student_class.class FROM students LEFT JOIN Stu
 ```
 
 | id | name        | class |
-| 1  | Jerusheya   |  11   |
+|:---|:------------|:------|
+|  1 | Jerusheya   |  11   |
 |  2 | Abisha      |  10   |
 |  3 | Swetha      |   9   |
 |  4 | Saranya     |   8   |
