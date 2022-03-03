@@ -308,7 +308,7 @@ SELECT students.id,students.name,students.email,students.mobile_no,students.pass
 ###### Query ok,1 row selected(0.00 sec)
 
 
-#### DISPLAY ALL STUDENTS NAME WITH CLASS - INCLUDE BOTH ENROLLED AND NOT ENROLLED
+#### 17.DISPLAY ALL STUDENTS NAME WITH CLASS - INCLUDE BOTH ENROLLED AND NOT ENROLLED
 
 ```syntax
 SELECT students.id,students.name,Student_class.class FROM students LEFT JOIN Student_class ON students.id=Student_class.student_id;
