@@ -9,7 +9,7 @@ WHEN conditionn THEN resultn
 ELSE other_result
 END;
 ```
-###### conditions should be based on base_column
+###### (conditions should be based on base_column)
 
 ```syntax
 mysql> CREATE DATABASE case_when;
@@ -41,7 +41,7 @@ mysql> SELECT * FROM Customers;
 
 ###### 6 rows in set (0.00 sec)
 
-### CASE WHEN USING SELECT :
+### 1.CASE WHEN USING SELECT :
 
 #### CASE WHEN WITH CONDITION:
 
