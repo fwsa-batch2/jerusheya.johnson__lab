@@ -125,6 +125,17 @@ SELECT * FROM table_name;
 
 ### 3. SAVEPOINT:
 
+```syntax
+INSERT INTO table_name VALUES ('aarthy');
+```
+
+```syntax
+SAVEPOINT A;
+```
+
+
+
+
 
 
 

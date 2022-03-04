@@ -181,11 +181,7 @@ UPDATE Student_class SET class=6 WHERE id=12;
 #### Feature 8: Student withdrawn from a Class 
 
 ```syntax
-ALTER TABLE students DROP PRIMARY KEY;
-```
-
-```syntax
-DELETE FROM students WHERE id=2;
+DELETE FROM Student_class WHERE id=2;
 ```
 
 #### Feature 9: Find student details who have not updated their Date Of Birth 
@@ -242,8 +238,7 @@ SELECT class,COUNT(status) FROM Student_class WHERE status = 'ACTIVE' GROUP BY c
 ###### Query ok, 7 rows selected (0.001 sec)
 
 #### Feature 13: Display student and class details 
-Using Joins (Inner Join) 
-Using Subqueries ( Scalar SubQuery) 
+Using Joins (Inner Join)  
 
 ##### Using Joins:
 
@@ -274,7 +269,7 @@ Class : 5th Standard
 Using Joins 
 
 ```syntax
-SELECT * FROM student INNER JOIN Student_class ON student.id=Student_detail.id;
+SELECT * FROM student INNER JOIN Student_class ON student.id=Student_detail.id WHERE class=5;
 ```
 
 | id | name       | email                    | mobile_no    | password  | gender | created_date            | dob          | id | student_id | class | status   |
