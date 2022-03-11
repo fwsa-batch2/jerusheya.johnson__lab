@@ -232,3 +232,13 @@ SHOW DATABASES;
 
 ###### 4 rows in set (0.01 sec)
 * * *
+
+
+####  remove default from a base table:
+
+```syntax
+alter table practice alter grade drop default;
+```
+
+###### Query OK, 0 rows affected (0.04 sec)
+###### Records: 0  Duplicates: 0  Warnings: 0
