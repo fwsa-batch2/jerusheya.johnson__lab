@@ -7,20 +7,22 @@ show databases;
 ```
 
 | Database           |
-|--------------------|
-| Academy            |
-| Example            |
-| blazers            |
+|:-------------------|
+| case_when          |
+| constraints        |
+| fwsa_batch2        |
 | information_schema |
-| lab                |
+| jerusheya          |
 | mysql              |
 | performance_schema |
-| swetha             |
+| project            |
+| school             |
 | sys                |
-| view               |
+| tcl                |
 | views              |
 
-### creating db called subqueries
+
+### creating database:
 ```
 create database subqueries;
 ```
@@ -29,28 +31,32 @@ show databases;
 ```
 
 | Database           |
-|--------------------|
-| Academy            |
-| Example            |
-| blazers            |
+|:-------------------|
+| case_when          |
+| constraints        |
+| fwsa_batch2        |
 | information_schema |
-| lab                |
+| jerusheya          |
 | mysql              |
 | performance_schema |
-| subqueries         |
+| project            |
+| school             |
 | sys                |
+| tcl                |
 | views              |
+| subqueries         |
+
 ### using subqueries
 ```
 use subqueries;
 ```
-### creating table called book
+### creating table:
 ```
-create table book(sno int primary key auto_increment,name varchar(20),marks int);
+create table class(id int primary key auto_increment,name varchar(20),marks int);
 ```
 ### inserting values to book
 ```
-insert into book values(1,'Abisha','96'),(2,'Annam','97'),(3,'Aswath','50'),(4,'Haiden','85'),(5,'Jerusheya','87'),(6,'Rishi','60'),(7,'Santhanu','99'),(8,'Saranya','90'),(9,'Swetha','100'),(10,'Selva','98');
+insert into class values(1,'Abisha','96'),(2,'Annam','97'),(3,'Aswath','50'),(4,'Haiden','85'),(5,'Jerusheya','87'),(6,'Rishi','60'),(7,'Santhanu','99'),(8,'Saranya','90'),(9,'Swetha','100'),(10,'Selva','98');
 ```
 ### Get datas from book
 ```
