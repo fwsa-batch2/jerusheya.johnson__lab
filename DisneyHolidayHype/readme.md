@@ -44,6 +44,25 @@ USE Disney_Holiday_Hype;
 
 ###### Database changed
 
+```syntax
+SHOW TABLES;
+```
+
+| Tables_in_Disney_Holiday_Hype |
+|:------------------------------|
+| Add_Category                  |
+| Add_Product                   |
+| Reviews                       |
+| Roles                         |
+| Shop_Payment                  |
+| Shopping                      |
+| Ticket_Booking                |
+| Ticket_Payment                |
+| User_Detail                   |
+
+###### 9 rows in set (0.00 sec)
+
+
 ### 2.Table creations:
 
 #### 1.User_Detail table:
@@ -126,8 +145,27 @@ DESC Add_Product;
 | Product_Detail       | varchar(300) | YES  |     | NULL    |                |
 
 ###### 5 rows in set (0.00 sec)
+#### 5. Shopping table:
 
-#### 5. Shop_Payment table:
+```syntax
+CREATE TABLE Shopping (Shop_ID tinyint PRIMARY KEY AUTO_INCREMENT,User_ID tinyint,Product_ID tinyint,Category_ID tinyint,No_Of_Products tinyint, FOREIGN KEY(User_ID) REFERENCES User_Detail(User_ID),FOREIGN KEY(Product_ID) REFERENCE Add_Product(Product_ID),FOREIGN KEY(Category_ID) REFERENCES Add_Category(Category_ID));
+```
+
+```syntax
+DESC Shopping;
+```
+
+| Field          | Type    | Null | Key | Default | Extra          |
+|:---------------|:--------|:-----|:----|:--------|:---------------|
+| Shop_ID        | tinyint | NO   | PRI | NULL    | auto_increment |
+| User_ID        | tinyint | YES  | MUL | NULL    |                |
+| Product_ID     | tinyint | YES  | MUL | NULL    |                |
+| Category_ID    | tinyint | YES  | MUL | NULL    |                |
+| No_Of_Products | tinyint | NO   |     | NULL    |                |
+
+###### 5 rows in set (0.01 sec)
+
+#### 6. Shop_Payment table:
 
 ```syntax
 CREATE TABLE Shop_Payment (Payment_ID tinyint PRIMARY KEY AUTO_INCREMENT,Shop_ID tinyint NOT NULL,CardHolder_Name varchar(20) NOT NULL,Account_NO bigint NOT NULL,Total_Amount_inRupees varchar(100) NOT NULL,Transaction_Date DATE NOT NULL,FOREIGN KEY(Shop_ID) REFERENCES Shopping(Shop_ID));
@@ -149,7 +187,7 @@ DESC Shop_Payment;
 
 ###### 6 rows in set (0.00 sec)
 
-#### 6.Reviews table:
+#### 7.Reviews table:
 
 ```syntax
  CREATE TABLE Reviews (Review_ID tinyint PRIMARY KEY AUTO_INCREMENT,User_ID tinyint,Name varchar(30) NOT NULL,Date DATE NOT NULL,Stars tinyint NOT NULL,Feedback varchar(100),FOREIGN KEY (User_ID) REFERENCES User_Detail (User_ID));
@@ -171,7 +209,7 @@ DESC Reviews;
 
 ###### 6 rows in set (0.01 sec)
 
-#### 7. Ticket_Booking table:
+#### 8. Ticket_Booking table:
 
 ```syntax
 CREATE TABLE Ticket_Booking (Ticket_ID tinyint PRIMARY KEY AUTO_INCREMENT,User_ID tinyint,Email varchar(300) NOT NULL,Phone_NO bigint NOT NULL,Date_Of_Journey DATE NOT NULL,No_Of_Passengers int NOT NULL,FOREIGN KEY(User_ID) REFERENCES User_Detail(User_ID));
@@ -193,7 +231,7 @@ DESC Ticket_Booking;
 
 ###### 6 rows in set (0.01 sec)
 
-#### 8. Ticket_Payment table:
+#### 9. Ticket_Payment table:
 
 ```syntax
 CREATE TABLE Ticket_Payment (Payment_ID tinyint PRIMARY KEY AUTO_INCREMENT,Ticket_ID tinyint,Cardholder_Name varchar(30) NOT NULL,Acccount_NO bigint NOT NULL,Total_Amount varchar(100) NOT NULL,Transaction_Date DATE NOT NULL,Mode_Of_Payment varchar(50) NOT NULL,FOREIGN KEY(Ticket_ID) REFERENCES Ticket_Booking(Ticket_ID));
@@ -372,53 +410,12 @@ INSERT INTO Ticket_Payment VALUES (10,4,'Johnson','8394859282938472','Rs.10,000'
 ###### Query OK, 3 rows affected (0.01 sec)
 ###### Records: 3  Duplicates: 0  Warnings: 0
 
-```syntax
-SELECT * FROM Ticket_Payment;
-```
-
-| Payment_ID | Ticket_ID | Cardholder_Name  | Acccount_NO       | Total_Amount | Transaction_Date | Mode_Of_Payment |
-|:-----------|:----------|:-----------------|:------------------|:-------------|:-----------------|:----------------|
-|          1 |         1 | James Williams   |  2345678923456789 | Rs.20,000    | 2022-01-02       | Gpay            |
-|          2 |         2 | Noah Roberts     |  2783456729383746 | Rs.50,000    | 2022-03-19       | NetBanking      |
-|          3 |         3 | Ava Smith        |  8765432198765432 | Rs.30,000    | 2022-05-23       | Cash            |
-|          4 |         4 | Johnson          |  8394859282938472 | Rs.40,000    | 2022-02-13       | Gpay            |
-|          5 |         1 | James Williams   |  2345678923456789 | Rs.30,000    | 2022-03-13       | Gpay            |
-|          6 |         5 | Shruthi hasan    | 74635267183726384 | Rs.50,000    | 2022-03-09       | Cash            |
-|          7 |         3 | Ava Smith        |  8765432198765432 | Rs.20,000    | 2022-06-01       | Cash            |
-|          8 |         6 | Juliet           |  7834783489239012 | Rs.40,000    | 2022-06-09       | NetBanking      |
-|          9 |         7 | Daphne Christina |  2345345645675678 | Rs.20,000    | 2022-04-04       | Gpay            |
-|         10 |         4 | Johnson          |  8394859282938472 | Rs.10,000    | 2022-03-24       | Gpay            |
-|         11 |         6 | Juliet           |  7834783489239012 | Rs.10,000    | 2022-07-01       | NetBanking      |
-|         12 |         7 | Daphne Christina |  2345345645675678 | Rs.30,000    | 2022-05-03       | Gpay            |
-
-###### 12 rows in set (0.00 sec)
 
 ```syntax
 UPDATE Ticket_Payment SET Acccount_NO='7463727282917256' WHERE Payment_ID=6;
 ```
 ###### Query OK, 1 row affected (0.01 sec)
 ###### Rows matched: 1  Changed: 1  Warnings: 0
-
-```syntax
-SELECT * FROM Ticket_Payment;
-```
-
-| Payment_ID | Ticket_ID | Cardholder_Name  | Acccount_NO      | Total_Amount | Transaction_Date | Mode_Of_Payment |
-|:-----------|:----------|:-----------------|:-----------------|:-------------|:-----------------|:----------------|
-|          1 |         1 | James Williams   | 2345678923456789 | Rs.20,000    | 2022-01-02       | Gpay            |
-|          2 |         2 | Noah Roberts     | 2783456729383746 | Rs.50,000    | 2022-03-19       | NetBanking      |
-|          3 |         3 | Ava Smith        | 8765432198765432 | Rs.30,000    | 2022-05-23       | Cash            |
-|          4 |         4 | Johnson          | 8394859282938472 | Rs.40,000    | 2022-02-13       | Gpay            |
-|          5 |         1 | James Williams   | 2345678923456789 | Rs.30,000    | 2022-03-13       | Gpay            |
-|          6 |         5 | Shruthi hasan    | 7463727282917256 | Rs.50,000    | 2022-03-09       | Cash            |
-|          7 |         3 | Ava Smith        | 8765432198765432 | Rs.20,000    | 2022-06-01       | Cash            |
-|          8 |         6 | Juliet           | 7834783489239012 | Rs.40,000    | 2022-06-09       | NetBanking      |
-|          9 |         7 | Daphne Christina | 2345345645675678 | Rs.20,000    | 2022-04-04       | Gpay            |
-|         10 |         4 | Johnson          | 8394859282938472 | Rs.10,000    | 2022-03-24       | Gpay            |
-|         11 |         6 | Juliet           | 7834783489239012 | Rs.10,000    | 2022-07-01       | NetBanking      |
-|         12 |         7 | Daphne Christina | 2345345645675678 | Rs.30,000    | 2022-05-03       | Gpay            |
-
-###### 12 rows in set (0.00 sec)
 
 #### renaming a column:
 ```syntax
@@ -449,6 +446,8 @@ SELECT * FROM Ticket_Payment;
 
 ###### 12 rows in set (0.00 sec)
 
+#### 6. Insert into Add_Category:
+
 ```syntax
 INSERT INTO Add_Category VALUES (1,2,'Kids'),(2,4,'Men'),(3,2,'Women'),(4,2,'Gadgets'),(5,4,'Toys'),(6,6,'Homeware'),(7,6,'Fashion and Accessories'),(8,2,'Stationery'),(9,4,'Backpacks'),(10,6,'Serveware'),(11,2,'Comfort Tees');
 ```
@@ -475,7 +474,7 @@ SELECT * FROM Add_Category;
 
 ###### 11 rows in set (0.00 sec)
 
-#### 6.Insert into Add_Product:
+#### 7.Insert into Add_Product:
 ```syntax
 INSERT INTO Add_Product VALUES (1,1,'Marvel Spider-Man Blue Sweatshirt','Rs.840','Blue color and for kids');
 ```
@@ -532,7 +531,7 @@ SELECT * FROM Add_Product;
 
 ###### 20 rows in set (0.00 sec)
 
-#### 7.Insert into Shopping:
+#### 8.Insert into Shopping:
 
 ```syntax
 INSERT INTO Shopping VALUES (1,1,3,2,2),(2,1,5,3,1),(3,3,10,6,3),(4,5,12,6,5),(5,7,20,11,1),(6,5,2,1,10),(7,8,7,4,2),(8,7,16,8,4),(9,9,13,6,3),(10,10,5,3,5),(11,10,10,6,7);
@@ -559,7 +558,7 @@ SELECT * FROM Shopping;
 
 ###### 11 rows in set (0.00 sec)
 
-#### 8.Insert into Shop_Payment:
+#### 9.Insert into Shop_Payment:
 
 ```syntax
  INSERT INTO Shop_Payment VALUES (5,2,'James Williams','2345678923456789','Rs.1390','2022-03-23'),(6,7,'Shruthihasan','7463727282917256','Rs.1390','2022-04-02'),(7,6,'Ava Smith','8765432198765432','Rs.6390','2022-05-20'),(8,11,'Daphne Christina','2345345645675678','Rs.3493','2022-04-24'),(9,10,'Daphne Christina','2345345645675678','Rs.4600','2022-03-22'),(10,8,'Johnson','8394859282938472','Rs.3996','2022-04-03'),(11,9,'Juliet','7834783489239012','Rs.1997','2021-11-22'),(12,2,'James Williams','2345678923456789','Rs.400','2021-12-30'),(13,9,'Juliet','7834783489239012','Rs.4000','2022-01-29');
