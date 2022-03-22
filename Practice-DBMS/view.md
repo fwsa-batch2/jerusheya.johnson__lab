@@ -153,7 +153,7 @@ SELECT * FROM practice_model;
 #### 6. remove default from a base table:
 
 ```syntax
-alter table practice alter grade drop default;
+ALTER TABLE practice ALTER grade DROP default;
 ```
 
 ###### Query OK, 0 rows affected (0.04 sec)

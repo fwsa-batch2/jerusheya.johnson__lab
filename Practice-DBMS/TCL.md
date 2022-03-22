@@ -1,4 +1,4 @@
-## Transaction Control Language:( not completed yet)
+## Transaction Control Language:
 
 ### 1. COMMIT :
 
@@ -133,6 +133,11 @@ INSERT INTO table_name VALUES ('aarthy');
 SAVEPOINT A;
 ```
 
+```syntax
+ROLLBACK TO A;
+```
+
+###### (Rollback to the last commited query)
 
 
 

@@ -48,98 +48,104 @@ show databases;
 
 ### using subqueries
 ```
-use subqueries;
+USE SUBQUERIES;
 ```
 ### creating table:
 ```
-create table class(id int primary key auto_increment,name varchar(20),marks int);
+CREATE TABLE class(id int primary key auto_increment,name varchar(20),marks int);
 ```
 ### inserting values to book
 ```
-insert into class values(1,'Abisha','96'),(2,'Annam','97'),(3,'Aswath','50'),(4,'Haiden','85'),(5,'Jerusheya','87'),(6,'Rishi','60'),(7,'Santhanu','99'),(8,'Saranya','90'),(9,'Swetha','100'),(10,'Selva','98');
+INSERT INTO class values(1,'Abisha','96'),(2,'Annamalai','97'),(3,'Aswath','50'),(4,'Haiden','85'),(5,'Jerusheya','87'),(6,'Rishi','60'),(7,'Santhanu','99'),(8,'Saranya','90'),(9,'Swetha','100'),(10,'Selva','98');
 ```
 ### Get datas from book
 ```
-select*from book;
+SELECT * FROM book;
 ```
 
 | sno | name      | marks |
 |-----|-----------|-------|
-|   1 | Abisha    | 96%   |
-|   2 | Annam     | 97%   |
-|   3 | Aswath    | 50%   |
-|   4 | Haiden    | 85%   |
-|   5 | Jerusheya | 87%   |
-|   6 | Rishi     | 60%   |
+|   1 | Abisha    | 96    |
+|   2 | Annamalai | 97    |
+|   3 | Aswath    | 50    |
+|   4 | Haiden    | 85    |
+|   5 | Jerusheya | 87    |
+|   6 | Rishi     | 60    |
 |   7 | Santhanu  | 99    |
 |   8 | Saranya   | 90    |
 |   9 | Swetha    | 100   |
 |  10 | Selva     | 98    |
+
+
 ### using subquery in select statement
+
 ```
-select* from book where marks in (select marks from book where marks>95);
+SELECT * FROM book where marks in (select marks from book where marks>95);
 ```
 
 | sno | name     | marks |
 |-----|----------|-------|
 |   1 | Abisha   |    96 |
-|   2 | Annam    |    96 |
+|   2 | Annamalai|    97 |
 |   7 | Santhanu |    99 |
 |   9 | Swetha   |   100 |
 |  10 | Selva    |    98 |
+
 ```
-select avg(marks) from book;
+SELECT  avg(marks) AS Avg_Marks from book;
 ```
 
-| avg(marks) |
+| Avg_Marks  |
 |------------|
 |    84.4000 |
 
 ```
-select* from book where marks > (select avg(marks) from book);
+SELECT * FROM book WHERE marks > (select avg(marks) from book);
 ```
 
 | sno | name     | marks |
 |-----|----------|-------|
 |   1 | Abisha   |    96 |
-|   2 | Annam    |    96 |
+|   2 | Annamalai|    97 |
 |   7 | Santhanu |    99 |
 |   8 | Saranya  |    90 |
 |   9 | Swetha   |   100 |
 |  10 | Selva    |    98 |
+
 ### creating table called student_marks
 ```
-create table student_marks(id int primary key auto_increment,name varchar(20),marks int);
+CREATE TABLE student_marks(id int primary key auto_increment,name varchar(20),marks int);
 ```
 ### using subquery in Insert statement
 ```
-insert into student_marks select*from book where marks >(select avg(marks) from book);
+INSERT INTO student_marks select*from book where marks > (select avg(marks) from book);
 ```
 ### Getting datas
 ```
-select*from student_marks;
+SELECT * FROM student_marks;
 ```
 | id | name     | marks |
 |----|----------|-------|
 |  1 | Abisha   |    96 |
-|  2 | Annam    |    96 |
+|  2 | Annamalai|    97 |
 |  7 | Santhanu |    99 |
 |  8 | Saranya  |    90 |
 |  9 | Swetha   |   100 |
 | 10 | Selva    |    98 |
+
 ### using subqueries in delete statement
 ```
-delete from score where marks in (select marks from student_marks where marks=100);
+DELETE FROM score WHERE marks in (select marks from student_marks where marks=100);
 ```
 ### showing datas
 ```
-select*from score;
+SELECT * FROM score;
 ```
 
 | sno | name      | marks |
 |-----|-----------|-------|
 |   1 | Abisha    |    96 |
-|   2 | Annam     |    96 |
+|   2 | Annamalai |    97 |
 |   3 | Aswath    |    50 |
 |   4 | Haiden    |    75 |
 |   5 | Jerusheya |    80 |
@@ -147,26 +153,27 @@ select*from score;
 |   7 | Santhanu  |    99 |
 |   8 | Saranya   |    90 |
 |  10 | Selva     |    98 |
+
 ### using subqueries in update statement
 ```
-update score set Name='Shravan' where sno in (select id from student_mark
-s where id=10);
+UPDATE score SET Name='Sesslyn' WHERE sno in (SELECT id FROM student_mark
+s WHERE id=10);
 ```
 ### Get datas
 ```
-select*from score;
+SELECT * FROM score;
 ```
 
 | sno | name      | marks |
 |-----|-----------|-------|
-|   1 | Santhanu  |    96 |
-|   2 | Abisha    |    96 |
+|   1 | Abisha    |    96 |
+|   2 | Annamalai |    97 |
 |   3 | Aswath    |    50 |
 |   4 | Haiden    |    75 |
 |   5 | Jerusheya |    80 |
 |   6 | Rishi     |    60 |
 |   7 | Santhanu  |    99 |
 |   8 | Saranya   |    90 |
-|  10 | Shravan   |    98 |
+|  10 | Sesslyn   |    98 |
 
 

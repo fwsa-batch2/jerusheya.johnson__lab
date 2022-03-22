@@ -123,4 +123,4 @@ SELECT * FROM foreignkey;
 ```syntax
 ALTER TABLE table_name DROP CONSTRAINT constraint_name;
 ```
-eg : ALTER TABLE table_name DROP FOREIGN KEY fk_id;
+###### eg : ALTER TABLE table_name DROP FOREIGN KEY fk_id;
