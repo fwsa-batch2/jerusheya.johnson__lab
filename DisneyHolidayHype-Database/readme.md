@@ -279,9 +279,12 @@ Jackson','oliviajackson456@gmail.com','7654321098','oliviajackson@456'),(5,'Ava 
 ###### Query OK, 4 rows affected (0.01 sec)
 ###### Records: 4  Duplicates: 0  Warnings: 0
 
+
+
 ```syntax
 SELECT * FROM User_Detail;
 ```
+### Output table 1:
 
 | User_ID | UserName       | Email                      | Phone_NO   | Password          |
 |:--------|:---------------|:---------------------------|:-----------|:------------------|
@@ -588,4 +591,10 @@ SELECT * FROM Shop_Payment;
 
 ###### 13 rows in set (0.00 sec)
 
+### Database ER Diagram:
 
+![alt er-diagram](holiday-hype-er.png)
+
+### Database EER Diagram:
+
+![alt eer-diagram](holiday-hype-eer.png)
