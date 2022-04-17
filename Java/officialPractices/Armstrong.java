@@ -16,6 +16,12 @@ public class Armstrong {
             result = cubenum.intValue();
         } 
         scan.close();
-        System.out.println(result);
+    
+        if(result==number){
+            System.out.print("This is an armstrong number");
+        }
+        else{
+            System.out.print("This is not an armstrong number");
+        }
     }
 }
