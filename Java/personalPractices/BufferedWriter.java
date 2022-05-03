@@ -12,8 +12,10 @@ public class BufferedWriter {
         buffer.write("jeru");
         buffer.close();
     }
-    private void close() {
+    void close() {
     }
-    private void write(String string) {
+    void write(String string) {
+    }
+    public void newLine() {
     }
 }
