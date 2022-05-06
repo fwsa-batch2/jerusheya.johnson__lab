@@ -2,6 +2,7 @@
     "java.project.sourcePaths": [
         "personalPractices",
         "officialPractices",
-        "Hackerrank"
+        "Hackerrank",
+        "ConceptualPractices"
     ]
 }
