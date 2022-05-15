@@ -1,4 +1,4 @@
-package com.jeru;
+package com.Encapsulation1;
 
 public class AccessSpecifiers {
 

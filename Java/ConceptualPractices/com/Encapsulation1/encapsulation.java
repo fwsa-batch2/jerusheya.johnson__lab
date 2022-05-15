@@ -1,4 +1,4 @@
-package com.jeru;
+package com.Encapsulation1;
 import java.util.Scanner;
 
 class userData {

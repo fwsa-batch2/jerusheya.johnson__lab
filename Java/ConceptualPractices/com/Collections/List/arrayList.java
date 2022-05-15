@@ -1,4 +1,4 @@
-package com.Collections;
+package com.Collections.List;
 
 import java.util.*;
 import java.util.Iterator;

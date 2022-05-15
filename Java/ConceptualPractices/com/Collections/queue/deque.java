@@ -1,4 +1,4 @@
-package com.Collections;
+package com.Collections.queue;
 import java.util.*;
   
 public class deque {

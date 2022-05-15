@@ -1,6 +1,6 @@
-package com.Jerusheya;
+package com.Encapsulation2;
 
-import com.jeru.AccessSpecifiers;
+import com.Encapsulation1.AccessSpecifiers;
 
 public class Access {
     
