@@ -10,7 +10,7 @@ class car extends automobile{
     }
 }
 public class Electriccar extends car{
-    @override public final String drive(){
+    @Override public final String drive(){
              return "driving electric car"; 
     }
     public static void main(String[] args){

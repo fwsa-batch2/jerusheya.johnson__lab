@@ -13,7 +13,7 @@ public class CreateTable {
 	       try {
 	           Connection connect = DriverManager.getConnection(url,user,password);
 	           Statement stmt = connect.createStatement();
-	           String sql="CREATE TABLE Students(id tinyint PRIMARY KEY AUTO_INCREMENT,NAME varchar(20),CLASS tinyint)";
+	           String sql="CREATE TABLE Student(id tinyint PRIMARY KEY AUTO_INCREMENT,NAME varchar(20),CLASS tinyint)";
 	           stmt.executeUpdate(sql);
 	           System.out.println("TABLE CREATED");
 	       } catch (SQLException e) {
