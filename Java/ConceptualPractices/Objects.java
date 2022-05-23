@@ -9,6 +9,8 @@ public class Objects {
         obj.add(3);
         obj.add(4);
         System.out.println("object = " +obj.getClass() +"   stringObject = " +obj.toString().getClass());
+
+    
         
     }
 

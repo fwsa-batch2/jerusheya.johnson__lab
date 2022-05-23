@@ -1,0 +1,168 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch PracticeThread",
+            "request": "launch",
+            "mainClass": "Multithread.PracticeThread",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch checkElement",
+            "request": "launch",
+            "mainClass": "checkElement",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch sumarray",
+            "request": "launch",
+            "mainClass": "sumarray",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch girdloop",
+            "request": "launch",
+            "mainClass": "girdloop",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch calculator",
+            "request": "launch",
+            "mainClass": "calculator",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch duplicatearray",
+            "request": "launch",
+            "mainClass": "duplicatearray",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch declaringarray",
+            "request": "launch",
+            "mainClass": "declaringarray",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch sortarray1",
+            "request": "launch",
+            "mainClass": "sortarray1",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Armstrong",
+            "request": "launch",
+            "mainClass": "Armstrong",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch Prime",
+            "request": "launch",
+            "mainClass": "Prime",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch average",
+            "request": "launch",
+            "mainClass": "average",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch datatype",
+            "request": "launch",
+            "mainClass": "datatype",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch factorial",
+            "request": "launch",
+            "mainClass": "factorial",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch fibanaci",
+            "request": "launch",
+            "mainClass": "fibanaci",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch helloworld",
+            "request": "launch",
+            "mainClass": "helloworld",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch oddOrEven",
+            "request": "launch",
+            "mainClass": "oddOrEven",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch operators",
+            "request": "launch",
+            "mainClass": "operators",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch perfectNumber",
+            "request": "launch",
+            "mainClass": "perfectNumber",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch reverse",
+            "request": "launch",
+            "mainClass": "reverse",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch sortarray",
+            "request": "launch",
+            "mainClass": "sortarray",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch strongNumber",
+            "request": "launch",
+            "mainClass": "strongNumber",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch typecasting",
+            "request": "launch",
+            "mainClass": "typecasting",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        }
+    ]
+}
