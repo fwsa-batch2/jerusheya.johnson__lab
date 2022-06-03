@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Generics",
+            "request": "launch",
+            "mainClass": "Generics",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "jerusheya.johnson__lab_d1392052"
+        },
+        {
+            "type": "java",
             "name": "Launch PracticeThread",
             "request": "launch",
             "mainClass": "Multithread.PracticeThread",

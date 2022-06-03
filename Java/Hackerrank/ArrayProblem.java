@@ -37,6 +37,7 @@ public class ArrayProblem {
         for(Integer num : numList){
             System.out.print(num+" ");
         }
+        sc.close();
     }
 }
 

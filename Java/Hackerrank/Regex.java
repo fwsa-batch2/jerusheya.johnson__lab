@@ -1,4 +1,5 @@
 import java.util.regex.*;
+import  java.util.Scanner;
 
 public class Regex {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class Regex {
         Scanner in = new Scanner(System.in);
 		int testCases = Integer.parseInt(in.nextLine());
         if(testCases>0){
-		for(int i=0;i<3;i++){
+		for(int i=0;i<testCases;i++){
 			String pattern1 = in.nextLine();
         
           	//Write your code
@@ -19,7 +20,7 @@ public class Regex {
             } catch(PatternSyntaxException e) {
                 System.out.println("Invalid");
             }
-       
+        in.close();
 		}
         }
     }

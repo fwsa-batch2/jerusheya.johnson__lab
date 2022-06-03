@@ -11,20 +11,16 @@ public class Duplicatearray {
         givenlist.add(50);
         givenlist.add(50); 
         givenlist.add(50);
-        System.out.print(givenlist);
-        for(int k=0;k<givenlist.size();k++){
+       
         for(int i=0;i<givenlist.size();i++){
             for(int j=i+1;j<givenlist.size();j++){
                
             if(givenlist.get(i)==givenlist.get(j)){
                 givenlist.remove(givenlist.get(i));
-            }
-            
+            } 
            }
-
         }
-    }
+    
         System.out.println(givenlist);
-        System.out.println(givenlist.size());
     }
 }
