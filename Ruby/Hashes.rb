@@ -1,6 +1,10 @@
 #hashes
+#hash =  Hash.new  ---> can also create  a  hash
 studentDetails={"name"=>  "jeru",  "age"=>  "19","sex"=>"female"}
 classDetails={"class"=> "3","school"=> "andrews","teacher"=> "ruby"}
+
+#to print key:value
+studentDetails.each {|key,value| puts "#{key}: #{value}"}
 
 #for each loop
 studentDetails.each  do |keys,values|
@@ -39,3 +43,4 @@ else
 end
 
 #https://www.tutorialspoint.com/ruby/ruby_hashes.htm
+

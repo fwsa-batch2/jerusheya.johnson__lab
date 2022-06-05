@@ -12,5 +12,7 @@ public class SumArray {
          System.out.println(average);
 
          
+
+         
     }
 }

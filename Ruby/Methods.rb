@@ -23,3 +23,10 @@ def addition
     sum
 end
 puts "The sum is #{addition}"
+
+def capitalize(string) 
+    puts "#{string[0].upcase}#{string[1..-1]}" #can be used many times
+end
+  
+  capitalize("ryan") # prints "Ryan"
+  capitalize("jane") 

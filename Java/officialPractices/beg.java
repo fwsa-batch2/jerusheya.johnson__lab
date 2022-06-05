@@ -5,9 +5,6 @@ public class beg {
        
          int row, i, j, space = 1;
          row = 5;
-        
-        
-         space = row - 1;
          for (j = 1; j<= row; j++)
          {
              for (i = 1; i<= space; i++)
@@ -21,6 +18,7 @@ public class beg {
              }
              System.out.println("");
          } 
+         space = row - 1;
          space = 1;
          for (j = 1; j<= row - 1; j++)
          {
