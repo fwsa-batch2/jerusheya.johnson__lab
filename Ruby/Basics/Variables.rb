@@ -14,7 +14,7 @@ class Customer
      @cust_addr = addr
      end
       
-    # displaying result 
+    # displaying result p in ruby
      def display_details()
      puts "Customer id #@cust_id"
      puts "Customer name #@cust_name"
