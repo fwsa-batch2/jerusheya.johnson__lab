@@ -1,16 +1,17 @@
 class Employee
-    public
+   
+    
         def setEmployeeId(empId)
-            @employeeId = empId
-        end
-
-        def setEmployeeName(empName)
-            @employeeName = empName
+           @employeeId = empId
         end
 
         def getEmployeeId
             return @employeeId
         end
+        def setEmployeeName(empName)
+           @employeeName = empName
+        end
+
 
         def getEmployeeName
             return @employeeName

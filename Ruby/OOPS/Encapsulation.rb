@@ -27,13 +27,13 @@ class AttrAccessor
     
 
     #attr_reader
-    #similar to attr
+    #inititalize a variable name and creater getter method
     
     attr_reader :class 
    
 
     #attr
-    #initialize a variable name and creater getter method
+    #similar to attr_reader
     
     attr :address
     

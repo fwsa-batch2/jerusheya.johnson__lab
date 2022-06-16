@@ -18,6 +18,13 @@ module Circle
     end
 end
 
-require 'date' # imports module
+require 'date' # imports module  (already defined module)
 puts Date.today #prints today's date
+
+#or
+#Circle::area (then should give method name as only area)
+
+#or 
+#import Circle
+#Circle.area
 

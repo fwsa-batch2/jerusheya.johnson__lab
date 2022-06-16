@@ -1,5 +1,7 @@
 array = [1,2,"jeru",true]
-puts array
+for i in 0...array.length
+    puts i 
+end
 
 my_array = [2,4,1,6,3]
 puts my_array.sort!
