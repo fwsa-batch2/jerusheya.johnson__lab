@@ -46,7 +46,7 @@ class TodosList
   def to_displayable_list
     result = []
     @todos.each do |rec|
-      if rec.date == date
+      if rec.date == @due_date
         result.push("#{rec.to_displayable_string}")
       else
         result.push("#{rec.to_displayable_string} #{rec.date}")
