@@ -1,6 +1,6 @@
 
-require "/home/jerusheyajohnson/Documents/jerusheya.johnson__lab/Ruby/WD201/todo_CLI/connect_db.rb"
-require "/home/jerusheyajohnson/Documents/jerusheya.johnson__lab/Ruby/WD201/todo_CLI/todo.rb"
+require "/home/jerusheyajohnson/Documents/jerusheya.johnson__lab/Ruby/WD201/todo_database/connect_db.rb"
+require "/home/jerusheyajohnson/Documents/jerusheya.johnson__lab/Ruby/WD201/todo_database/todo.rb"
 
 def get_new_todo
   puts "Todo text:"
@@ -24,11 +24,3 @@ if h
   Todo.show_list
 end
 
-
-connect_db!
-h = get_new_todo
-if h
-  new_todo = TodoList.add_task(h)
-  puts "New todo created with id #{new_todo.id}"
-#   Todo.show_list
-end
