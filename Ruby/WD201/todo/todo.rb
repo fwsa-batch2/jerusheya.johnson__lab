@@ -1,13 +1,15 @@
 require "date"
 
 class Todo
-  attr_accessor :text,:date,:completed
+  attr_accessor :text,:date,:completed #produces getters and setters
   def initialize(text,due_date,completed)
       @text = text
       @due_date = due_date
       @completed = completed
   end
-  def overdue
+
+  #checking whether the @due_date is greater or smaller
+  def overdue 
     date = Date.today
     return (@due_date > date)? true : false
   end
@@ -19,17 +21,18 @@ class Todo
     date = Date.today
     return (@due_date == date)? true : false
   end
-  def to_displayable_string
+  #creating the strings to be displayed based on completed
+  def to_displayable_string 
      sym = (@completed)? "[X]" : "[]"
      return "#{sym} #{@text}"
   end
 end
 
 class TodosList
-  def initialize(todos)
+  def initialize(todos) #giving the array todos as input
     @todos = todos
   end
-  def add(record)
+  def add(record) #adding the parameters of todo class into todos
     @todos.push(record)
   end
   def overdue
@@ -58,7 +61,9 @@ class TodosList
 
 end
 
-date = Date.today
+date = Date.today 
+
+
 todos = [
   { text: "Submit assignment", due_date: date - 1, completed: false },
   { text: "Pay rent", due_date: date, completed: true },

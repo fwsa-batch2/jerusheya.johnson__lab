@@ -1,3 +1,6 @@
+# #3rd program:
+# #Print the given list of todos by category.
+
 todos = [
     ["Send invoice", "money"],
     ["Clean room", "organize"],
