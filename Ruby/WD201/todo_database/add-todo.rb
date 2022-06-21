@@ -10,17 +10,18 @@ def get_new_todo
   puts "How many days from now is it due? (give an integer value)"
   due_in_days = gets.strip.to_i
 
-  {
+  @h={
     todo_text: todo_text,
     due_in_days: due_in_days,
   }
 end
 
 connect_db!
-h = get_new_todo
-if h
-  new_todo = Todo.add_task(h)
+@h[:todo_text] = todo_text 
+@h[:due_in_days]= due_date
+@h = get_new_todo
+if @h
+  new_todo = Todo.add_task(todo_text,due_date)
   puts "New todo created with id #{new_todo.id}"
   Todo.show_list
 end
-

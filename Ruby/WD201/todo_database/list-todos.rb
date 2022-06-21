@@ -1,4 +1,7 @@
-require "/home/jerusheyajohnson/Documents/jerusheya.johnson__lab/Ruby/WD201/todo_database/connect_db.rb"
-require "/home/jerusheyajohnson/Documents/jerusheya.johnson__lab/Ruby/WD201/todo_database/todo.rb"
+require './connect_db.rb'
+require './todo.rb'
+require './add-todo.rb'
+require './complete-todo.rb'
 
 connect_db!
+Todo.show_list
