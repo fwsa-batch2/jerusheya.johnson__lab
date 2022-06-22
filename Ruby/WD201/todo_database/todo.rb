@@ -1,45 +1,44 @@
 require 'active_record'
 class Todo < ActiveRecord::Base
-      def due_today?
-        due_date == Date.today
+      def self.due_today?
+        @due_date == Date.today
       end
 
       def to_displayable_string
         display_status = completed ? "[X]" : "[ ]"
-        display_date = due_today? ? nil : due_date
-        "#{display_status} #{todo_text} #{display_date}"
+        "#{display_status} #{todo_text}"
       end
 
       def self.to_displayable_list
         all.map {|todo| todo.to_displayable_string }
       end
 
-      def self.show_list(todos)  
+      def self.show_list 
         result = []
-        todos.each do |rec|
-          if rec.date == due_date
+        all.each do |rec|
+          if Todo.due_today?
             result.push("#{rec.to_displayable_string}")
           else
-            result.push("#{rec.to_displayable_string} #{rec.date}")
+            result.push("#{rec.to_displayable_string} #{rec.due_date}")
           end
         end
     
         return result 
       end
-    
-      
-      def self.add_task(todo_text,due_date)
-        hash={}
-        hash[:todo_text]=text
-        hash[:due_date]=Date.Today+dates_remaining
-        hash[:completed]=false
-        todos.push(hash)
+      def self.insert_into_table(todo_text, due_date)
+        Todo.create!(todo_text: todo_text, due_date: due_date, completed: false)
       end
-      def self.mark_as_complete(todo_id)
-        if todos[todo_id].include? todo_id
-            @completed == true
-        else  
-            @completed == false
-        end
+      
+      def self.add_task(h)
+        todo_text=h[:todo_text]
+        no_of_days=h[:due_in_days]
+        due_date=Date.today+no_of_days
+        Todo.insert_into_table(todo_text,due_date)
+       
+      end
+      def self.mark_as_completed(todo_id)
+        mark_as_complete = Todo.find(todo_id)
+        mark_as_complete.completed = true
+        mark_as_complete.save
       end
 end
