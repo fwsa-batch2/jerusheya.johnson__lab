@@ -23,8 +23,9 @@ class Todo
   end
   #creating the strings to be displayed based on completed
   def to_displayable_string 
-     status = (@completed)? "[X]" : "[]"
-     return "#{status} #{@text}"
+    status = (self.completed) ? "[X] " : "[ ] "
+    date_text = (@due_date == Date.today) ? nil : @due_date
+    "#{status} #{@text} #{date_text}"
   end
 end
 
@@ -47,17 +48,11 @@ class TodosList
   end
 
   def to_displayable_list
-    result = []
-    @todos.each do |rec|
-      date = Date.today 
-      if date == rec.due_date
-        result.push("#{rec.to_displayable_string}")
-      else
-        result.push("#{rec.to_displayable_string} #{rec.due_date}")
-      end
-    end
-
-    return result 
+    result = []  
+    @todos.map do |rec|
+    result.push("#{rec.to_displayable_string}")
+   end
+   result
   end
 
 end

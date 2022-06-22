@@ -41,7 +41,7 @@ def resolve(dns_records, lookup_chain, domain)
   else
     lookup_chain << "Invalid record type for " + domain
   end
-  return lookup_chain
+  lookup_chain
 end
 
 dns_record = parse_dns(dns_raw)
